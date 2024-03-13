@@ -3,7 +3,7 @@ name: Hello world workflow
 on:
   push:
     branches:
-      - main:
+      - main
   pull_request:
     branches:
       - main
@@ -11,9 +11,9 @@ on:
 
 jobs:
   hello:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: hello world
-        run: Write-Host "Hello World"
-        shell: powershell
+        run: echo "Hello World"
+        shell: bash
